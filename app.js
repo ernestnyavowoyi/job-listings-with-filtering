@@ -7,6 +7,7 @@ const categories = {
     'tools': []
 };
 
+
 $('#clearFiltersBtn').on('click', event => {
     event.preventDefault();
     categories.role = '';
