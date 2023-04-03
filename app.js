@@ -146,7 +146,8 @@ const displayListings = arr => {
 
     // clear the container
     // const filterContentContainer = $('#filter-content ul');
-    const filterContentContainer = document.getElementById('filter-content').getElementsByTagName('ul');
+    // const filterContentContainer = document.getElementById('filter-content').getElementsByTagName('ul');
+    const filterContentContainer = document.querySelector('filter-content ul');
 
 
     filterContentContainer[0].innerHTML = '';
