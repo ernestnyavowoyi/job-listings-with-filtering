@@ -147,10 +147,9 @@ const displayListings = arr => {
     // clear the container
     // const filterContentContainer = $('#filter-content ul');
     // const filterContentContainer = document.getElementById('filter-content').getElementsByTagName('ul');
-    const filterContentContainer = document.querySelector('filter-content ul');
+    const filterContentContainer = document.querySelector('#filter-content ul');
 
-
-    filterContentContainer[0].innerHTML = '';
+    filterContentContainer.innerHTML = '';
     let isFilterActive = false; // a boolean flag to determine whether or not filters has been applied by the user
 
     for (const property in categories) {
@@ -161,7 +160,7 @@ const displayListings = arr => {
                     isFilterActive = true;
                     let li = document.createElement('li');
                     li.innerHTML += `<p>${categories[property][prop]}</p> <a class="removeFilterBtn" ${dataValues} href="#"><img src="./images/icon-remove.svg" alt="&times;"></a>`;
-                    filterContentContainer[0].append(li);
+                    filterContentContainer.append(li);
                 }
             }
         } else if (typeof categories[property] === 'string' && categories[property].length) {
@@ -169,7 +168,7 @@ const displayListings = arr => {
             let dataValues = `data-filter-type="${property}" data-filter-value="${categories[property]}"`;
             let li = document.createElement('li');
             li.innerHTML += `<p>${categories[property]}</p> <a class="removeFilterBtn" ${dataValues} href="#"><img src="./images/icon-remove.svg" alt="&times;"></a>`;
-            filterContentContainer[0].append(li);
+            filterContentContainer.append(li);
         }
 
     }
